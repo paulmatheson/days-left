@@ -1,0 +1,102 @@
+body {
+    background-color: #000;
+    display: flex;
+    font-family: helvetica;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 90vh;
+}
+
+h1 {
+    font-size: 16px;
+}
+
+.container {
+    width: 596px;
+}
+
+.date-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.attribute {
+    font-size: 0.8em;
+    color: #a4a4a4;
+    width: 100%;
+    text-align: center;
+}
+
+.attribute a {
+    color: white;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 10px);
+    gap: 12px;
+    margin-bottom: 2em;
+}
+
+.outerDiv {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dateDiv {
+    width: 5px;
+    height: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #444;
+    transition: background-color 0.3s ease;
+    pointer-events: none;
+}
+
+.filled {
+    background-color: white !important;
+}
+
+@keyframes rollIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rollOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.rollingDigit {
+
+    overflow: hidden;
+    position: relative;
+}
+
+.rollingDigit span {
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+    animation: rollIn 0.3s ease forwards;
+}

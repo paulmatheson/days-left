@@ -7,7 +7,7 @@ const fragment = document.createDocumentFragment()
 const today = new Date()
 const todayDigit = today.getTime() / (1000 * 60 * 60 * 24)
 
-const newYearsDay = new Date('2025-01-01')
+const newYearsDay = new Date('2026-01-01')
 const newYearsDayDigit = newYearsDay.getTime() / (1000 * 60 * 60 * 24)
 const diffInDays = todayDigit - newYearsDayDigit
 
